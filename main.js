@@ -259,7 +259,7 @@ var mystyle = {
       "source": "cartiqo",
       "source-layer":"natural",
       "minzoom": 7,
-      "maxzoom": 16,
+      "maxzoom": 20,
       "paint": {
           "fill-color": "#008000",
           "fill-outline-color":"#FFFFFF"
@@ -389,7 +389,7 @@ map.on('click', 'geojson-points', function (e) {
 console.log(e.features[0]);
 new mapboxgl.Popup()
     .setLngLat(e.lngLat)
-    .setHTML(e.features[0].properties)
+    .setHTML(e.features[0].properties.name)
     .addTo(map);
 
 });
